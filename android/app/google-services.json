@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "694587553891",
+    "project_id": "shoely-app",
+    "storage_bucket": "shoely-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:694587553891:android:fc9bd9bf8600d7d5262056",
+        "android_client_info": {
+          "package_name": "com.example.shoely_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "694587553891-0gvcjfqn9fghjt9esl5ehfb2t5fpt5dr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shoely_app",
+            "certificate_hash": "9a69669bcc0e4424558ac892aded2e4c3a14bba4"
+          }
+        },
+        {
+          "client_id": "694587553891-khc2llkudo2kfd20rn8ddn823g4im6qe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeEf7q4ih_L7vf8o1S_Fzvx5OakM-wKE0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "694587553891-khc2llkudo2kfd20rn8ddn823g4im6qe.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "694587553891-1v5qc3t3tg1qgf1neakbk2jn0ttm2aem.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.shoelyApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:694587553891:android:5cd327174270bf3e262056",
+        "android_client_info": {
+          "package_name": "com.example.shoely_dashboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "694587553891-khc2llkudo2kfd20rn8ddn823g4im6qe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeEf7q4ih_L7vf8o1S_Fzvx5OakM-wKE0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "694587553891-khc2llkudo2kfd20rn8ddn823g4im6qe.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "694587553891-1v5qc3t3tg1qgf1neakbk2jn0ttm2aem.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.shoelyApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
