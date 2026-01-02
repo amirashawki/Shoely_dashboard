@@ -11,6 +11,7 @@ class AddProductInputModel {
   final String? imageUrl;
   final String productCode;
   final bool isFeatured;
+  final num size;
 
   AddProductInputModel({
     required this.name,
@@ -20,6 +21,7 @@ class AddProductInputModel {
     this.imageUrl,
     required this.productCode,
     required this.isFeatured,
+    required this.size,
   });
   factory AddProductInputModel.fromEntity(
     AddProductInputEntity addProductInputEntity,
@@ -31,7 +33,8 @@ class AddProductInputModel {
       imageFile: addProductInputEntity.imageFile,
       productCode: addProductInputEntity.productCode,
       isFeatured: addProductInputEntity.isFeatured,
-      imageUrl: addProductInputEntity.imageUrl
+      imageUrl: addProductInputEntity.imageUrl,
+      size: addProductInputEntity.size,
     );
   }
   toJson() {
@@ -42,6 +45,7 @@ class AddProductInputModel {
       'imageUrl': imageUrl,
       'productCode': productCode,
       'isFeatured': isFeatured,
+      'size': size,
     };
   }
 }

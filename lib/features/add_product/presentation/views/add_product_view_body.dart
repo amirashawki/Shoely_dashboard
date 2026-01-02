@@ -22,7 +22,7 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
   late String productName, productCode, productDescription;
   bool isProductFeatured = false;
   File? imageFile;
-  late num productPrice;
+  late num productPrice, productsize;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -62,6 +62,14 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
                 },
               ),
               SizedBox(height: 25),
+              CustomTextFormField(
+                hintText: 'size',
+                maxLines: 1,
+                onSaved: (value) {
+                  productsize = num.parse(value!);
+                },
+              ),
+              SizedBox(height: 25),
               IsFeatured(
                 onChanged: (isFeatured) {
                   isProductFeatured = isFeatured;
@@ -88,6 +96,7 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
                             price: productPrice,
                             isFeatured: isProductFeatured,
                             imageFile: imageFile!,
+                            size: productsize,
                           );
                       context.read<AddProductCubit>().addProduct(
                         addProductInputEntity,

@@ -5,10 +5,11 @@ class AddProductInputEntity {
   final String description;
 
   final num price;
- File imageFile;
- String? imageUrl;
+  File imageFile;
+  String? imageUrl;
   final String productCode;
   final bool isFeatured;
+  final num size;
 
   AddProductInputEntity({
     required this.name,
@@ -18,5 +19,6 @@ class AddProductInputEntity {
     this.imageUrl,
     required this.productCode,
     required this.isFeatured,
+    required this.size,
   });
 }
