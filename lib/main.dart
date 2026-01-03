@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shoely_dashboard/core/services/bloc_observer_services.dart';
 import 'package:shoely_dashboard/core/services/get_it_services.dart';
+import 'package:shoely_dashboard/core/services/supabase_storage.dart';
 import 'package:shoely_dashboard/core/utils/app_router.dart';
 import 'package:shoely_dashboard/firebase_options.dart';
 
@@ -13,6 +14,8 @@ void main() async {
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   setupGetIt();
   Bloc.observer = AppBlocObserver();
+  await SupabaseStorageServices.initSupabase;
+  await SupabaseStorageServices.createBuckets('shoes_image');
   runApp(
     DevicePreview(
       enabled: true,

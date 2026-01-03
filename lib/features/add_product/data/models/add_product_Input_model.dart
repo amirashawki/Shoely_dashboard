@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:shoely_dashboard/features/add_product/data/models/review_model.dart';
 import 'package:shoely_dashboard/features/add_product/domain/entities/add_product_input_entity.dart';
 
 class AddProductInputModel {
@@ -12,6 +13,7 @@ class AddProductInputModel {
   final String productCode;
   final bool isFeatured;
   final num size;
+  final List<ReviewModel> reviews;
 
   AddProductInputModel({
     required this.name,
@@ -22,6 +24,7 @@ class AddProductInputModel {
     required this.productCode,
     required this.isFeatured,
     required this.size,
+    required this.reviews,
   });
   factory AddProductInputModel.fromEntity(
     AddProductInputEntity addProductInputEntity,
@@ -35,6 +38,9 @@ class AddProductInputModel {
       isFeatured: addProductInputEntity.isFeatured,
       imageUrl: addProductInputEntity.imageUrl,
       size: addProductInputEntity.size,
+      reviews: addProductInputEntity.reviews
+          .map((e) => ReviewModel.fromEntity(e))
+          .toList(),
     );
   }
   toJson() {
@@ -46,6 +52,7 @@ class AddProductInputModel {
       'productCode': productCode,
       'isFeatured': isFeatured,
       'size': size,
+      'reviews': reviews.map((e) => e.toJson()).toList(),
     };
   }
 }

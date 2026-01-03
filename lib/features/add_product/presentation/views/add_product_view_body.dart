@@ -97,6 +97,7 @@ class _AddProductViewBodyState extends State<AddProductViewBody> {
                             isFeatured: isProductFeatured,
                             imageFile: imageFile!,
                             size: productsize,
+                            reviews: [],
                           );
                       context.read<AddProductCubit>().addProduct(
                         addProductInputEntity,
