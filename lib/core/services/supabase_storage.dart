@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:path/path.dart' as p;
 
 import 'package:shoely_dashboard/core/services/storage_services.dart';
+import 'package:shoely_dashboard/core/utils/backend_endpoint.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 class SupabaseStorageServices implements StorageServices {
@@ -9,7 +10,7 @@ class SupabaseStorageServices implements StorageServices {
   static initSupabase() async {
     _supabase = await Supabase.initialize(
       url: 'https://rnpwqrcehwjfwteflzar.supabase.co',
-      anonKey: 'sb_secret_CbrMp··························',
+      anonKey: 'sb_publishable_KbMfu2SQSn8_C2yxarkf-w_afTlH-PF',
     );
   }
 
@@ -30,11 +31,14 @@ class SupabaseStorageServices implements StorageServices {
     String fileName = p.basename(file.path);
     String extensionName = p.extension(file.path);
     var result = await _supabase.client.storage
-        .from('shoes_image')
+        .from(BackendEndpoint.bucketName)
         .upload('$paath$fileName.$extensionName', file);
     final String publicUrl = _supabase.client.storage
-        .from('shoes_image')
-        .getPublicUrl('$paath$fileName.$extensionName');
+        .from('BackendEndpoint.bucketName')
+        .getPublicUrl('$paath$fileName');
+    print('image is $publicUrl');
+    print('image is $result');
+
     return result;
   }
 }
